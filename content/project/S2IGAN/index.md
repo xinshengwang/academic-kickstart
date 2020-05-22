@@ -269,7 +269,7 @@ Your browser does not support the audio element.
 <td>
 <img src="yellow_blue.png" width="200">
 <audio controls style="width:200px;height:32px">
-<source src="yellow_black.wav" type="audio/mpeg" >
+<source src="yellow_blue.wav" type="audio/mpeg" >
 Your browser does not support the audio element.
 </audio></td>
 </tr></table>
@@ -405,7 +405,7 @@ table{margin:0px auto}
 
 <small>
 
-**Effect of the distinctive loss in SEN** We investigated the effect of the distinctive loss $\mathcal{L}_d$ for training SEN. The results are shown in Table 2. As can be seen, SEN without using $\mathcal{L}_d$ for training shows a performance drop in terms of mAP on both datasets. Importantly, a better performance of SEN always led to an increase in the performance of S2IGAN, showing the importance of learning a good speech embedding for the task of image generation. 
+**Effect of the distinctive loss in SEN** We investigated the effect of the distinctive loss $\mathcal{L}_d$ for training SEN. The SEN module was evaluated using a cross-modal image retrieval task. Specifically, we used speech descriptions to retrieve the corresponding images with the same class. Retrieval performance was evaluated with the mean Average Precision (mAP). Higher mAP means a better retrieval result, indicating better performance on embedding speech information. The results are shown in Table 2. As can be seen, SEN without using $\mathcal{L}_d$ for training shows a performance drop in terms of mAP on both datasets. Importantly, a better performance of SEN always led to an increase in the performance of S2IGAN, showing the importance of learning a good speech embedding for the task of image generation.  
 </small>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
@@ -472,3 +472,9 @@ To better understand the role of the loss function, we visualized the speech fea
 </small>
 
 {{< figure src="SNE.png" title="Visualization of the distribution of the speech embeddings created by SEN without (a) and with (b) distinctive loss. For ease of inspection, the presented data are from 10 randomly selected classes from the CUB test dataset." lightbox="true" width="450" align="center">}}
+
+### Paper
+The paper was released on arXiv: https://arxiv.org/abs/2005.06968
+
+### Code 
+The source code will be released soon: https://github.com/xinshengwang/S2IGAN.
